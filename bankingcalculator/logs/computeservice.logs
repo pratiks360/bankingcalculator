@@ -1,0 +1,138 @@
+2020-02-12 12:35:33.920  INFO 47396 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 47396 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:35:33.927  INFO 47396 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:35:37.027  INFO 47396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:35:37.065  INFO 47396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:35:37.066  INFO 47396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:35:37.380  INFO 47396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:35:37.380  INFO 47396 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3349 ms
+2020-02-12 12:35:37.949  INFO 47396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:35:38.446  INFO 47396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:35:38.463  INFO 47396 --- [main] com.yesbank.bankingcalculator.App        : Started App in 5.55 seconds (JVM running for 6.67)
+2020-02-12 12:36:09.891  INFO 47396 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:36:09.893  INFO 47396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:36:09.900  INFO 47396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-02-12 12:36:33.526  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:36:33.529  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:36:34.101  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * 1 / 100
+2020-02-12 12:36:34.439  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.services.ComputeService            : Result generated with serivce :: si :: 4000
+2020-02-12 12:36:34.444  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.services.ComputeService            : Finished service compute with operation :: si
+2020-02-12 12:36:34.445  INFO 47396 --- [http-nio-8080-exec-3] c.y.b.controllers.ComputeController      : Finished controller method getResult with operation si
+2020-02-12 12:38:18.485  INFO 47396 --- [http-nio-8080-exec-6] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:38:18.485  INFO 47396 --- [http-nio-8080-exec-6] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:38:18.518  INFO 47396 --- [http-nio-8080-exec-6] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:38:18.558 ERROR 47396 --- [http-nio-8080-exec-6] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:38:18.559 ERROR 47396 --- [http-nio-8080-exec-6] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:40:05.801  INFO 53892 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 53892 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:40:05.805  INFO 53892 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:40:07.204  INFO 53892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:40:07.217  INFO 53892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:40:07.218  INFO 53892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:40:07.353  INFO 53892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:40:07.354  INFO 53892 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1470 ms
+2020-02-12 12:40:07.574  INFO 53892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:40:07.824  INFO 53892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:40:07.827  INFO 53892 --- [main] com.yesbank.bankingcalculator.App        : Started App in 2.685 seconds (JVM running for 3.381)
+2020-02-12 12:40:14.859  INFO 53892 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:40:14.861  INFO 53892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:40:14.867  INFO 53892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-02-12 12:40:15.051  INFO 53892 --- [http-nio-8080-exec-1] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:40:15.055  INFO 53892 --- [http-nio-8080-exec-1] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:40:15.531  INFO 53892 --- [http-nio-8080-exec-1] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:40:15.742 ERROR 53892 --- [http-nio-8080-exec-1] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:40:15.743 ERROR 53892 --- [http-nio-8080-exec-1] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:41:39.554  INFO 51348 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 51348 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:41:39.558  INFO 51348 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:41:40.993  INFO 51348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:41:41.002  INFO 51348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:41:41.006  INFO 51348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:41:41.168  INFO 51348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:41:41.169  INFO 51348 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1555 ms
+2020-02-12 12:41:41.360  INFO 51348 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:41:42.581  INFO 51348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:41:42.596  INFO 51348 --- [main] com.yesbank.bankingcalculator.App        : Started App in 3.499 seconds (JVM running for 4.077)
+2020-02-12 12:41:50.401  INFO 51348 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:41:50.402  INFO 51348 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:41:50.411  INFO 51348 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-02-12 12:41:50.642  INFO 51348 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:41:50.642  INFO 51348 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:41:51.264  INFO 51348 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:41:51.490 ERROR 51348 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:41:51.495 ERROR 51348 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:49:28.096  INFO 51252 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 51252 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:49:28.103  INFO 51252 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:49:29.649  INFO 51252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:49:29.659  INFO 51252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:49:29.661  INFO 51252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:49:29.783  INFO 51252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:49:29.784  INFO 51252 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1615 ms
+2020-02-12 12:49:29.993  INFO 51252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:49:31.219  INFO 51252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:49:31.228  INFO 51252 --- [main] com.yesbank.bankingcalculator.App        : Started App in 3.67 seconds (JVM running for 4.225)
+2020-02-12 12:49:36.467  INFO 51252 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:49:36.468  INFO 51252 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:49:36.480  INFO 51252 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-02-12 12:49:36.649  INFO 51252 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:49:36.650  INFO 51252 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:49:36.970  INFO 51252 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:49:37.212 ERROR 51252 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:49:37.212 ERROR 51252 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:50:32.125  INFO 55236 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 55236 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:50:32.130  INFO 55236 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:50:33.634  INFO 55236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:50:33.644  INFO 55236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:50:33.644  INFO 55236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:50:33.755  INFO 55236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:50:33.756  INFO 55236 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1572 ms
+2020-02-12 12:50:33.958  INFO 55236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:50:34.155  INFO 55236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:50:34.156  INFO 55236 --- [main] com.yesbank.bankingcalculator.App        : Started App in 2.536 seconds (JVM running for 3.053)
+2020-02-12 12:50:40.106  INFO 55236 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:50:40.109  INFO 55236 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:50:40.128  INFO 55236 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-02-12 12:50:40.305  INFO 55236 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:50:40.305  INFO 55236 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:50:40.634  INFO 55236 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:50:40.849 ERROR 55236 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:50:40.849 ERROR 55236 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:51:52.722  INFO 54880 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 54880 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:51:52.727  INFO 54880 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:51:54.267  INFO 54880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:51:54.288  INFO 54880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:51:54.288  INFO 54880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:51:54.410  INFO 54880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:51:54.411  INFO 54880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1620 ms
+2020-02-12 12:51:54.604  INFO 54880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:51:55.822  INFO 54880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:51:55.834  INFO 54880 --- [main] com.yesbank.bankingcalculator.App        : Started App in 3.625 seconds (JVM running for 4.094)
+2020-02-12 12:52:01.028  INFO 54880 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:52:01.029  INFO 54880 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:52:01.042  INFO 54880 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-02-12 12:52:01.214  INFO 54880 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:52:01.215  INFO 54880 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:52:01.600  INFO 54880 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:52:01.821 ERROR 54880 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:52:01.821 ERROR 54880 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : java.lang.NullPointerException
+2020-02-12 12:53:42.975  INFO 54896 --- [main] com.yesbank.bankingcalculator.App        : Starting App on Pratix-Box with PID 54896 (C:\Users\prati\git\repository\bankingcalculator\target\classes started by prati in C:\Users\prati\git\repository\bankingcalculator)
+2020-02-12 12:53:42.979  INFO 54896 --- [main] com.yesbank.bankingcalculator.App        : No active profile set, falling back to default profiles: default
+2020-02-12 12:53:44.542  INFO 54896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-12 12:53:44.553  INFO 54896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:53:44.554  INFO 54896 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-12 12:53:44.685  INFO 54896 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:53:44.689  INFO 54896 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1656 ms
+2020-02-12 12:53:44.883  INFO 54896 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 12:53:46.099  INFO 54896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-12 12:53:46.109  INFO 54896 --- [main] com.yesbank.bankingcalculator.App        : Started App in 3.609 seconds (JVM running for 4.198)
+2020-02-12 12:53:52.408  INFO 54896 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 12:53:52.410  INFO 54896 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-12 12:53:52.418  INFO 54896 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-02-12 12:53:52.637  INFO 54896 --- [http-nio-8080-exec-2] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:53:52.639  INFO 54896 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:53:53.154  INFO 54896 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * o1 / 100
+2020-02-12 12:53:53.467 ERROR 54896 --- [http-nio-8080-exec-2] c.y.b.services.ComputeService            : javax.script.ScriptException: ReferenceError: "o1" is not defined in <eval> at line number 1
+2020-02-12 12:53:53.470 ERROR 54896 --- [http-nio-8080-exec-2] c.y.b.c.GlobalExceptionHandler           : ScriptException handler executed
+2020-02-12 12:58:04.551  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.controllers.ComputeController      : Invoking controller method getResult with operation si
+2020-02-12 12:58:04.552  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.services.ComputeService            : Invoking service compute with operation :: si
+2020-02-12 12:58:04.582  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.services.ComputeService            : template generated with values :: 50000 * 8 * 1 / 100
+2020-02-12 12:58:04.589  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.services.ComputeService            : Result generated with serivce :: si :: 4000
+2020-02-12 12:58:04.590  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.services.ComputeService            : Finished service compute with operation :: si
+2020-02-12 12:58:04.590  INFO 54896 --- [http-nio-8080-exec-4] c.y.b.controllers.ComputeController      : Finished controller method getResult with operation si

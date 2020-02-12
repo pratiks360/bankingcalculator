@@ -2,3 +2,4 @@ com\yesbank\bankingcalculator\App.class
 com\yesbank\bankingcalculator\model\ComputeVariables.class
 com\yesbank\bankingcalculator\services\ComputeService.class
 com\yesbank\bankingcalculator\controllers\ComputeController.class
+com\yesbank\bankingcalculator\controllers\GlobalExceptionHandler.class

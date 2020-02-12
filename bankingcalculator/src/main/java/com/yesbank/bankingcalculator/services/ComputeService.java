@@ -4,11 +4,11 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Properties;
-
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -24,9 +24,10 @@ import com.yesbank.bankingcalculator.model.ComputeVariables;
 public class ComputeService {
 	@Value("${template_path}")
 	String path;
+	protected final Log logger = LogFactory.getLog(getClass());
 
 	public String compute(ComputeVariables cv) {
-
+		logger.info("Invoking service compute with operation :: " + cv.getFormulaCode());
 		Object result = null;
 		try {
 			String template = cv.getFormulaCode() + ".vm";
@@ -40,26 +41,19 @@ public class ComputeService {
 			t.merge(populate(cv.getAttributes()), writer);
 			ScriptEngineManager mgr = new ScriptEngineManager();
 			ScriptEngine engine = mgr.getEngineByName("JavaScript");
-
+			logger.info("template generated with values :: " + writer.toString());
 			result = (Object) engine.eval(writer.toString());
-		} catch (ResourceNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParseErrorException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MethodInvocationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ScriptException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.info("Result generated with serivce :: " + cv.getFormulaCode() + " :: " + result.toString());
+			logger.info("Finished service compute with operation :: " + cv.getFormulaCode());
+
+		} catch (ResourceNotFoundException | ParseErrorException | MethodInvocationException | ScriptException e) {
+			logger.error(e);
 		}
 		return result.toString();
 
 	}
 
-	public VelocityContext populate(HashMap<String,String> hm) {
+	public VelocityContext populate(HashMap<String, String> hm) {
 		VelocityContext context = new VelocityContext();
 		for (Entry<String, String> entry : hm.entrySet())
 			context.put(entry.getKey(), entry.getValue().replaceAll(",", ""));
