@@ -1,0 +1,1 @@
+$principle * Math.pow((1 + $rate/$frequency),($frequency * $tenure))

@@ -1,0 +1,1 @@
+($principle * $rate * Math.pow((1 + $rate),$frequency))/Math.pow((1 + $rate),($frequency - 1))
