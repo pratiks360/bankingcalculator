@@ -22,50 +22,56 @@ public class ProductController {
 	@Autowired
 	ProductRepo pr;
 
+	private static final String SUCCESS = "success";
+	private static final String FAILURE = "failure";
+
 	@GetMapping(path = "/all", produces = "application/json")
-	private Iterable<ProductMaster> getFields() {
+	public Iterable<ProductMaster> getFields() {
 
 		return pr.findAll();
 	}
 
 	@GetMapping(path = "/product/{id}", produces = "application/json")
-	ProductMaster getProductById(@PathVariable Long id) {
+	public ProductMaster getProductById(@PathVariable Long id) {
+		logger.info("getProductById Method invoked");
 		return pr.findById(id).get();
 	}
 
 	@PostMapping(path = "/add", consumes = "application/json", produces = "application/json")
-	private String createOrSaveEmployee(@RequestBody ProductMaster pm) {
+	public String createOrSaveProductMaster(@RequestBody ProductMaster pm) {
 
 		try {
-
+			logger.info("createOrSaveProductMaster Method invoked");
 			pr.save(pm);
 		} catch (Exception e) {
-			e.printStackTrace();
-			return "fail";
+			logger.error("Issue in createOrSaveProductMaster", e);
+			return FAILURE;
 		}
-		return "success";
+		return SUCCESS;
 	}
 
 	@PutMapping(path = "/update}")
-	private String updateEmployee(@RequestBody ProductMaster pm) {
+	public String updateProductMaster(@RequestBody ProductMaster pm) {
 		try {
-
+			logger.info("updateProductMaster Method invoked");
 			pr.save(pm);
 		} catch (Exception e) {
-			e.printStackTrace();
-			return "fail";
+			logger.error("Issue in updateProductMaster", e);
+			return FAILURE;
 		}
-		return "success";
+		return SUCCESS;
 	}
 
 	@DeleteMapping(path = "/delete/{id}", produces = "application/json")
-	private String deleteProduct(@PathVariable Long id) {
+	public String deleteProduct(@PathVariable Long id) {
 		try {
+			logger.info("deleteProduct Method invoked");
 			pr.deleteById(id);
 		} catch (Exception e) {
-			return "fail";
+			logger.error("Issue in deleteProduct", e);
+			return FAILURE;
 		}
-		return "success";
+		return SUCCESS;
 	}
 
 }
