@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -31,6 +32,7 @@ public class DefaultValues {
 	@JoinColumn(name = "field_id", nullable = false)
 	private ProductFields productFields;
 
+	@Lob
 	@Column(name = "jsonData")
 	@ElementCollection(targetClass = LinkedHashMap.class)
 	@JsonRawValue

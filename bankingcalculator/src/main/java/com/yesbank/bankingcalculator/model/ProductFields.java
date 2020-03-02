@@ -28,7 +28,7 @@ public class ProductFields {
 
 	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id", nullable = false)
+	@JoinColumn(name = "product_id", nullable = false)
 	private ProductMaster productID;
 
 	@Column(name = "field_name")
@@ -39,14 +39,16 @@ public class ProductFields {
 
 	@Column(name = "maxval")
 	private String maxval;
-	
-	
-	
+
+	@Column(name = "type")
+	private String type;
+
+	@Column(name = "Mandatory")
+	private String isMandatory;
+
 	@JsonManagedReference
-	@OneToMany(cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            mappedBy = "productFields")
-	 private List<DefaultValues> def_fields;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "productFields")
+	private List<DefaultValues> def_fields;
 
 	public Long getId() {
 		return id;
@@ -94,5 +96,21 @@ public class ProductFields {
 
 	public void setDef_fields(List<DefaultValues> def_fields) {
 		this.def_fields = def_fields;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getIsMandatory() {
+		return isMandatory;
+	}
+
+	public void setIsMandatory(String isMandatory) {
+		this.isMandatory = isMandatory;
 	}
 }

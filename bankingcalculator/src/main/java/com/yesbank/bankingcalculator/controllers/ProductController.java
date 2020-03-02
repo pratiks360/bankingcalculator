@@ -46,8 +46,8 @@ public class ProductController {
 		return "success";
 	}
 
-	@PutMapping(path = "/update/{id}")
-	private String updateEmployee(@RequestBody ProductMaster pm, @PathVariable Long id) {
+	@PutMapping(path = "/update}")
+	private String updateEmployee(@RequestBody ProductMaster pm) {
 		try {
 
 			pr.save(pm);
