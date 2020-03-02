@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS DEFAULT_VALUES;
+  
+CREATE TABLE DEFAULT_VALUES (
+  default_id INT   PRIMARY KEY,
+  field_id INT NOT NULL,
+  jsonData BLOB,
+  
+  
+);

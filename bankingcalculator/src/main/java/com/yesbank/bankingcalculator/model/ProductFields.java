@@ -1,5 +1,8 @@
 package com.yesbank.bankingcalculator.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,9 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity(name = "FIELD_MASTER")
 @Table(name = "FIELD_MASTER")
@@ -24,7 +29,7 @@ public class ProductFields {
 	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
-	private ComputeRules productID;
+	private ProductMaster productID;
 
 	@Column(name = "field_name")
 	private String name;
@@ -34,6 +39,14 @@ public class ProductFields {
 
 	@Column(name = "maxval")
 	private String maxval;
+	
+	
+	
+	@JsonManagedReference
+	@OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "productFields")
+	 private List<DefaultValues> def_fields;
 
 	public Long getId() {
 		return id;
@@ -43,11 +56,11 @@ public class ProductFields {
 		this.id = id;
 	}
 
-	public ComputeRules getProductID() {
+	public ProductMaster getProductID() {
 		return productID;
 	}
 
-	public void setProductID(ComputeRules productID) {
+	public void setProductID(ProductMaster productID) {
 		this.productID = productID;
 	}
 
@@ -73,5 +86,13 @@ public class ProductFields {
 
 	public void setMaxval(String maxval) {
 		this.maxval = maxval;
+	}
+
+	public List<DefaultValues> getDef_fields() {
+		return def_fields;
+	}
+
+	public void setDef_fields(List<DefaultValues> def_fields) {
+		this.def_fields = def_fields;
 	}
 }

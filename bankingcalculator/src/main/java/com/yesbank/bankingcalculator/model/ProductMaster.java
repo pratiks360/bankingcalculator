@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity(name = "PRODUCT_MASTER")
 @Table(name = "PRODUCT_MASTER")
-public class ComputeRules {
+public class ProductMaster {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "product_id")

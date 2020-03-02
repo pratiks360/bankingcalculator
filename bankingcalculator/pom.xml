@@ -21,14 +21,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>org.springframework</groupId>
-						<artifactId>springloaded</artifactId>
-						<version>LATEST</version>
-					</dependency>
-
-				</dependencies>
+				<configuration>
+					<fork>false</fork>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -77,6 +72,13 @@
 			<artifactId>h2</artifactId>
 			<version>1.4.193</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20190722</version>
+		</dependency>
+
 
 	</dependencies>
 </project>
