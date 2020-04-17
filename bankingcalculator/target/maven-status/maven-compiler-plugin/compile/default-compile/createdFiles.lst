@@ -1,9 +1,0 @@
-com\yesbank\bankingcalculator\model\ProductFields.class
-com\yesbank\bankingcalculator\repos\ProductRepo.class
-com\yesbank\bankingcalculator\model\ComputeRules.class
-com\yesbank\bankingcalculator\services\ComputeService.class
-com\yesbank\bankingcalculator\controllers\GlobalExceptionHandler.class
-com\yesbank\bankingcalculator\App.class
-com\yesbank\bankingcalculator\model\ComputeVariables.class
-com\yesbank\bankingcalculator\controllers\ProductController.class
-com\yesbank\bankingcalculator\controllers\ComputeController.class
