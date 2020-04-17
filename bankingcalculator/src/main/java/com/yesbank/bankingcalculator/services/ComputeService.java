@@ -4,9 +4,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Properties;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.velocity.Template;
@@ -29,7 +27,7 @@ public class ComputeService {
 
 	public String compute(ComputeVariables cv) {
 		logger.info("Invoking service compute with operation :: " + cv.getFormulaCode());
-		Object result = null;
+		String result = null;
 		StringWriter writer = new StringWriter();
 		try {
 			String template = cv.getFormulaCode() + ".vm";
@@ -38,17 +36,16 @@ public class ComputeService {
 			props.put("file.resource.loader.path", path);
 			ve.init(props);
 			Template t = ve.getTemplate(template);
-
-			
 			t.merge(populate(cv.getAttributes()), writer);
-			logger.info("template generated with values :: " + writer.toString());
-			logger.info("Result generated with serivce :: " + cv.getFormulaCode() + " :: " + writer.toString());
+			result = writer.toString();
+			logger.info("template generated with values :: " + result);
+			logger.info("Result generated with serivce :: " + cv.getFormulaCode() + " :: " + result);
 			logger.info("Finished service compute with operation :: " + cv.getFormulaCode());
 
-		} catch (ResourceNotFoundException | ParseErrorException | MethodInvocationException e ) {
+		} catch (ResourceNotFoundException | ParseErrorException | MethodInvocationException e) {
 			logger.error(e);
 		}
-		return writer.toString();
+		return result;
 
 	}
 
