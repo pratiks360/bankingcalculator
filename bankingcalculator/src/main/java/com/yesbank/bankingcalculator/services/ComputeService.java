@@ -15,6 +15,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.MethodInvocationException;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
+import org.apache.velocity.tools.generic.MathTool;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +30,7 @@ public class ComputeService {
 	public String compute(ComputeVariables cv) {
 		logger.info("Invoking service compute with operation :: " + cv.getFormulaCode());
 		Object result = null;
+		StringWriter writer = new StringWriter();
 		try {
 			String template = cv.getFormulaCode() + ".vm";
 			VelocityEngine ve = new VelocityEngine();
@@ -37,24 +39,22 @@ public class ComputeService {
 			ve.init(props);
 			Template t = ve.getTemplate(template);
 
-			StringWriter writer = new StringWriter();
+			
 			t.merge(populate(cv.getAttributes()), writer);
-			ScriptEngineManager mgr = new ScriptEngineManager();
-			ScriptEngine engine = mgr.getEngineByName("JavaScript");
 			logger.info("template generated with values :: " + writer.toString());
-			result = (Object) engine.eval(writer.toString());
-			logger.info("Result generated with serivce :: " + cv.getFormulaCode() + " :: " + result.toString());
+			logger.info("Result generated with serivce :: " + cv.getFormulaCode() + " :: " + writer.toString());
 			logger.info("Finished service compute with operation :: " + cv.getFormulaCode());
 
-		} catch (ResourceNotFoundException | ParseErrorException | MethodInvocationException | ScriptException e) {
+		} catch (ResourceNotFoundException | ParseErrorException | MethodInvocationException e ) {
 			logger.error(e);
 		}
-		return result.toString();
+		return writer.toString();
 
 	}
 
 	public VelocityContext populate(HashMap<String, String> hm) {
 		VelocityContext context = new VelocityContext();
+		context.put("math", new MathTool());
 		for (Entry<String, String> entry : hm.entrySet())
 			context.put(entry.getKey(), entry.getValue().replaceAll(",", ""));
 
